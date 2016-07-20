@@ -9,6 +9,5 @@
 - include: database.yaml
 - include: assets.yaml
 - include: init.yaml
-- include: apache.yaml
 - include: backups.yaml
 - include: monitoring.yaml
