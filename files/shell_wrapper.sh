@@ -17,11 +17,14 @@ source $HOME/.bash_profile
 export RAILS_ENV=production
 export DB=postgres
 
+PATH=$PATH:"$HOME/diaspora/bin"
+
 export DIASPORA_RUBY_VERSION=`cat $HOME/diaspora/.ruby-version`
 
 cd $HOME/diaspora
 
-if [[ "$1 $2" -ne "rvm install" ]]; then
+echo "$1 $2" "rvm install"
+if [ "$1 $2" != "rvm install" ]; then
     rvm use $DIASPORA_RUBY_VERSION@diaspora
 fi
 
